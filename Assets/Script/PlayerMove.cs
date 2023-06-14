@@ -26,6 +26,11 @@ public class PlayerMove : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce);
                 isJump = true;
             }
+            else if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+{
+                rb.AddForce(Vector2.up * jumpForce);
+                isJump = true;
+            }
         }
     }
 
